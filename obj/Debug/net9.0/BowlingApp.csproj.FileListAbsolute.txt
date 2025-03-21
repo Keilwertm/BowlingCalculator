@@ -1,0 +1,15 @@
+C:\Users\mkeilwert\RiderProjects\BowlingApp\bin\Debug\net9.0\BowlingApp.exe
+C:\Users\mkeilwert\RiderProjects\BowlingApp\bin\Debug\net9.0\BowlingApp.deps.json
+C:\Users\mkeilwert\RiderProjects\BowlingApp\bin\Debug\net9.0\BowlingApp.runtimeconfig.json
+C:\Users\mkeilwert\RiderProjects\BowlingApp\bin\Debug\net9.0\BowlingApp.dll
+C:\Users\mkeilwert\RiderProjects\BowlingApp\bin\Debug\net9.0\BowlingApp.pdb
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.AssemblyInfoInputs.cache
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.AssemblyInfo.cs
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.csproj.CoreCompileInputs.cache
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.sourcelink.json
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.dll
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\refint\BowlingApp.dll
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.pdb
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\BowlingApp.genruntimeconfig.cache
+C:\Users\mkeilwert\RiderProjects\BowlingApp\obj\Debug\net9.0\ref\BowlingApp.dll
