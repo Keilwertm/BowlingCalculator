@@ -19,9 +19,13 @@ public class BowlingApp
         {
             Console.WriteLine("Welcome to Bowling Calculator!");
             Console.WriteLine("Please enter your Name: ");
+            Console.ReadLine();
             Console.WriteLine("Please enter your Score: ");
+            Console.ReadLine();
             Console.WriteLine("Please enter in the total amount of rounds you want to play: ");
+            Console.ReadLine();
             Console.WriteLine($"Enter in your position to throw the ball from:{userPosition}");
+            Console.ReadLine();
             
             // I need to take the users inputs, and calculate the number randomly to give a score and determine if it's a strike.
             
