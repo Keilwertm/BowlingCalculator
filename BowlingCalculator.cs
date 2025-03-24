@@ -81,9 +81,7 @@ public class BowlingApp
                 // Finally, a strike will not increase the round count, and add ten to the score.
                 // Also, a gutter ball that eats a round and gives zero, I can do this the same as strike and enter it into a random number that the player can hit.
                 
-                // Optional: GUI, Strike animations, unit tests.
-                
-                
+                // Optional: GUI, Strike animations, unit tests, setting up usings in seperated files for cleaner code. 
                 
             }
         }
