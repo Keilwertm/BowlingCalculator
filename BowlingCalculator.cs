@@ -1,17 +1,10 @@
 ﻿namespace BowlingStuff;
-
 public class BowlingApp
 {
-    public string player1;
-    public int player1Score;
-    public bool isAStrike;
-    public int totalScore;
-    public int startingPosition;
-    public int randomPosition;
+    static public int playerScore;
     static public int userPosition;
     
     // no idea why making userPosition static magically makes it, so I can use it in Main.
-
     public class BowlingTime(int player1Score, bool isAStrike, int totalScore, int roundNumber, int startingPosition, int randomPosition)
     {
         static void Main()
@@ -20,7 +13,7 @@ public class BowlingApp
             Console.WriteLine("Please enter your Name: ");
             string nameInput = Console.ReadLine();
             
-            Console.WriteLine(nameInput + ", Please enter your Score: ");
+            Console.WriteLine(nameInput + ", Please enter your starting score: ");
             string scoreInput = Console.ReadLine();
             if (int.TryParse(scoreInput, out int score))
             {
@@ -60,38 +53,47 @@ public class BowlingApp
                 
                 int startingPosition = position;
                 Random starting = new Random();
-                int randomPosition = starting.Next(0, 35);      
+                int randomPosition = starting.Next(0, 35);
+                int sum = playerScore + score;
 
                 if (Math.Abs(randomPosition = startingPosition) <=2)
                 {
+                    Console.WriteLine($"\n--- Round {round} ---");
                     userPosition = randomPosition;
+                    int strikeScore = 10;
+                    playerScore += strikeScore;
+                    round = round - 1;
                     Console.WriteLine("It's a Strike! └(^o^ )Ｘ( ^o^)┘└(^o^ )Ｘ( ^o^)┘");
                 }
                 else if (randomPosition == 0)
                 {
+                    Console.WriteLine($"\n--- Round {round} ---");
                     Console.WriteLine("Gutter Ball! ");
                 }
                 else if (userPosition > randomPosition)
                 {
+                    Console.WriteLine($"\n--- Round {round} ---");
                     Random random = new Random();
-                    double randomLessThan = random.Next(1, 5);
+                    int randomLessThan = random.Next(1, 6);
                     Console.WriteLine("You knocked over " + randomLessThan + " Pins!");
+                    playerScore += randomLessThan;
                 }
                 else if (userPosition < randomPosition)
                 {
+                    Console.WriteLine($"\n--- Round {round} ---");
                     Random random = new Random();
-                    double randomMoreThan = random.Next(6, 9);
+                    int randomMoreThan = random.Next(6, 10);
                     Console.WriteLine("You knocked over " + randomMoreThan + " Pins!");
+                    playerScore += randomMoreThan;
                 }
+                Console.WriteLine("Your total score is " + playerScore);
             }
-
-                // I need to limit the positions to integers of 5 between 0 and 35 like a bowling lane. I could also make strikes somewhat more common by giving them a bigger range by 1-2 numbers maybe randomly.
-                // I need to loop the round by the enter in number of rounds the user wants to play, and then have a total score option.
-                // Finally, a strike will not increase the round count, and add ten to the score.
-                // Also, a gutter ball that eats a round and gives zero, I can do this the same as strike and enter it into a random number that the player can hit.
+                // I need to limit the positions of integers of 5 between 0 and 35 like a bowling lane. 
+                // Add a way to play again and display previous scores.
+                
+                // bugs - the number is not generating each loop. It's just staying the same, so if strike is 2 you can get a strike everytime by typing 2.
 
                 // Optional: GUI, Strike animations, unit tests, setting up usings in seperated files for cleaner code. 
-            
         }
     }
 }
