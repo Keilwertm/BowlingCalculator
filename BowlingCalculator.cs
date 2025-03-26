@@ -3,8 +3,7 @@ public class BowlingApp
 {
     static public int playerScore;
     static public int userPosition;
-    
-    // no idea why making userPosition static magically makes it, so I can use it in Main.
+    static public int position;
     public class BowlingTime()
     {
         static void Main()
@@ -21,18 +20,18 @@ public class BowlingApp
             }
             else
             {
-                Console.WriteLine("You entered an incorrect input. Please try again: InpSut must be an integer. ");
+                Console.WriteLine(nameInput + " ,entered an incorrect input. Please try again: InpSut must be an integer. ");
             }
             
             Console.WriteLine("Please enter in the total amount of rounds you want to play: "); 
             string roundInput = Console.ReadLine();
             if (int.TryParse(roundInput, out int rounds))
             {
-                Console.WriteLine("You entered: " + rounds);
+                Console.WriteLine(nameInput + " entered: " + rounds);
             }
             else
             {
-                while (!int.TryParse(roundInput, out rounds) || rounds < 1 || rounds > 10) // Validation for the round to be between 1-10 does not work8
+                while (!int.TryParse(roundInput, out rounds) || rounds < 1 || rounds > 10) // validation to make sure rounds are 1-10 does not work
                 {
                     Console.Write("Inavalid input. Please try again: Input must be an integer. ");
                 } 
@@ -40,8 +39,6 @@ public class BowlingApp
 
             for (int round = 1; round <= rounds; round++)
             {
-                int position;
-    
                 while (true) 
                 {
                     Console.WriteLine("Enter your position to throw the ball from (must be between 0 and 35):");
@@ -62,7 +59,7 @@ public class BowlingApp
                 int sum = playerScore + score;
                 int strikeStreak = 0;
 
-                if (Math.Abs(randomPosition - userPosition) <=2)
+                if (Math.Abs(randomPosition = position) <=2)
                 {
                     Console.WriteLine($"\n--- Round {rounds} ---");
                     userPosition = randomPosition;
@@ -89,7 +86,7 @@ public class BowlingApp
                 }
                 else if (userPosition > randomPosition)
                 {
-                    Console.WriteLine($"\n--- Round {rounds} ---");
+                    Console.WriteLine($"\n--- Round {rounds} ---");                         // something wrong with the rng. It only picks 1 number in a range, instead of picking any number above or below the random number
                     Random random = new Random();
                     int randomLessThan = random.Next(1, 6);
                     Console.WriteLine("You knocked over " + randomLessThan + " Pins!");
@@ -105,12 +102,9 @@ public class BowlingApp
                 }
                 Console.WriteLine("Your total score is " + playerScore);
             }
-                  
-                // the strike number is not updating for sure it's always 1-2
-                // Add a way to play again and display previous scores.
-                
-                // bugs - the number is not generating each loop. It's just staying the same, so if strike is 2 you can get a strike everytime by typing 2.
-
-                // Optional: GUI, Strike animations, unit tests, setting up usings in seperated files for cleaner code. 
         }
     }
+    
+// Add a way to play again and display previous scores.
+
+// Optional: GUI, Strike animations, unit tests, setting up usings in seperated files for cleaner code. 
